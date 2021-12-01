@@ -1,6 +1,6 @@
 {
   "name": "@datadog/sketches-js",
-  "version": "1.0.2-hassy",
+  "version": "1.0.4",
   "description": "TypeScript implementation of DDSketch, a distributed quantile sketch algorithm ",
   "license": "Apache-2.0",
   "repository": "https://github.com/DataDog/sketches-js",
@@ -32,8 +32,6 @@
     "generate:proto": "pbjs -t static-module -w commonjs -o src/ddsketch/proto/compiled.js src/ddsketch/proto/DDSketch.proto && pbts -o src/ddsketch/proto/compiled.d.ts src/ddsketch/proto/compiled.js"
   },
   "dependencies": {
-    "math-float64-frexp": "^1.0.0",
-    "math-float64-ldexp": "^1.0.1",
     "protobufjs": "^6.10.2"
   },
   "devDependencies": {
@@ -47,9 +45,5 @@
     "prettier": "^2.1.2",
     "ts-jest": "^26.4.0",
     "typescript": "^4.0.3"
-  },
-  "resolutions": {
-    "dot-prop": "^4.2.1",
-    "ini": "^1.3.6"
   }
 }
