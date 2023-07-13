@@ -281,7 +281,7 @@ export class LogCollapsingLowestDenseDDSketch extends BaseDDSketch {
         const store = new CollapsingLowestDenseStore(binLimit);
         const negativeStore = new CollapsingLowestDenseStore(binLimit);
 
-        super({ mapping, store, negativeStore, zeroCount: 0 });
+        super({ mapping, store, negativeStore, zeroCount: 0, min: Infinity, max: -Infinity, sum: 0 });
     }
 }
 
@@ -302,6 +302,6 @@ export class LogCollapsingHighestDenseDDSketch extends BaseDDSketch {
         const store = new CollapsingHighestDenseStore(binLimit);
         const negativeStore = new CollapsingHighestDenseStore(binLimit);
 
-        super({ mapping, store, negativeStore, zeroCount: 0 });
+        super({ mapping, store, negativeStore, zeroCount: 0, min: Infinity, max: -Infinity, sum: 0 });
     }
 }
